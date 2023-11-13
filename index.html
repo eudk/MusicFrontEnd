@@ -10,20 +10,20 @@
     <!-- https://cdnjs.com/libraries/axios -->
     <script src="https://unpkg.com/vue@next"></script>
     <title>Music Record REST</title>
-    
+
 </head>
 
 <body>
 <div
     id="app">
 <button v-on:click="getAll">Get All</button>
-{{records}}
-{{error}}
-{{id}}
+<ul>
+    <li v-for="item in records">{{item}}</li>
+</ul>
 
 </div>
 
-
+<script src="script.js"></script>
 
 
 

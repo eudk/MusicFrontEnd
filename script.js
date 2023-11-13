@@ -1,4 +1,4 @@
-const baseUri = "http://jsonplaceholder.typicode.com/posts"
+const baseUri = "https://musicrest20231109141315.azurewebsites.net/records"
 
 Vue.createApp({
     data() {
@@ -15,10 +15,10 @@ Vue.createApp({
             console.log(baseUri)
             try {
                 const response = await axios.get(baseUri)
-                this.posts = await response.data
+                this.records = await response.data
                 this.error = null
             } catch (ex) {
-                this.posts = []
+                this.records = []
                 this.error = ex.message
             }
         }
