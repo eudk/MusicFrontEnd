@@ -14,10 +14,22 @@
 </head>
 
 <body>
-<div
-    id="app">
-<button v-on:click="getAll">Get All</button>
-<ul>
+<div id="app">
+    <label>Title:</label>
+    <input v-model="f_title" placeholder="Title" type="text"></input>
+    <br>
+    <label>Artist:</label>
+    <input v-model="f_artist" placeholder="Artist" type="text"></input>
+    <br>
+    <label>Publication Year:</label>
+    <input v-model="f_pubyear" placeholder="Year" type="number"></input>
+    <br>
+    <label>Duration:</label>
+    <input v-model="f_duration" placeholder="Duration" type="number"></input>
+    <br>
+    <button v-on:click="getAll" id="button">Get All</button>
+    
+<ul id="list" v-if="records.length > 0">
     <li v-for="item in records">{{item}}</li>
 </ul>
 
